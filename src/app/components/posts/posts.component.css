@@ -1,0 +1,15 @@
+.btn {
+    margin: 0 10px;
+}
+.postContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+.mainTitle
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -1,0 +1,49 @@
+<div class="mt-5 mb-5 text-center">
+<form>
+    <div class="form-group">
+
+      <label 
+      for="exampleInputEmail1"
+      class="mb-3 mainTitle">
+      Enter Post Name & Press Enter:
+     </label>
+
+      <input 
+      type="email" 
+      (keyup.enter) ="createPost(title)"
+      #title
+      class="form-control m-auto w-50"  
+      placeholder="Enter Post Name">
+
+    </div>
+</form>
+</div>
+
+
+<ul class="list-group">
+    <li 
+    class="list-group-item postContainer" 
+    *ngFor="let post of posts">
+    <div class="postDiv">
+        <strong>
+            {{post.id}}.
+        </strong>
+            {{post.title}}
+    </div>
+    <div class="postButtons">
+        <button 
+        class="btn btn-primary btn-sm w-10"
+        (click)="updatePost(post)"
+        >
+            UPDATE
+        </button>
+
+        <button 
+        (click)="deletePost(post)"
+        class="btn btn-danger btn-sm w-10"
+        >
+            DELETE
+        </button>
+    </div>
+    </li>
+</ul>
